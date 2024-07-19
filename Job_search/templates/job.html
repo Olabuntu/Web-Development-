@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Job</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    {% include 'nav.html' %}
+    
+    <div class="container mt-4">
+        <b> <h4 style= "text-align:center; font-size: 60px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-variant: small-caps;">{{job[0]['job title'] }}</b></h4>
+        <div class="row">
+            <div class="col-10">
+               
+                <div><b> Company: </b>{{ job[0]['company'] }}</div>
+                {% if 'location' in job %}
+                <div><b>Location: </b>{{  job[0]['location'] }}</div>
+                {% endif %}
+                <div><b>Salary: </b>{{job[0]['salary']}}</div>
+                <div><b>Date posted: </b>{{ job[0]['date'] }}</div>
+                <b>Job Description: </b><div>{{ job[0]['job description'] }}</div>
+            </div>
+         
+             <div class="row col-5">   <b><h3 class="mt-4" >Apply for this job</h3></b>
+                <form action="/job/{{ job[0]['id'] }}/apply" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" name="name" placeholder="BUNTU" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Buntu@gmail.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cv" class="form-label">CV</label>
+                        <input type="file" class="form-control" id="cv" name="cv" accept=".pdf" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+                </div>
+
+</body>
+</html>
