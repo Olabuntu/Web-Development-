@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+    .nav-item .nav-link {
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.nav-item .nav-link:hover {
+    background-color: #007bff;
+    color: white;
+}
+.nav-item .nav-link.active {
+    background-color: #007bff;
+    color: white;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.bg-dark {
+    background-color: #343a40 !important;
+}
+
+.header, .services, .project-overview, .contact {
+    padding: 3rem 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+header .btn {
+    margin: 0 0.5rem;
+}
+
+.card {
+    margin: 1rem 0;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-body h5 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-body p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-body .btn {
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.text-reset {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        {% include 'header.html' %}
+        <!-- Header -->
+        <header class="text-center text-white bg-dark py-5" style="background-image: url('./static/home2.jpg'); background-size: cover; background-position: center;">
+            
+
+            <h1 style="color:darkgrey; font-family:sans-serif;font-style: italic; font-size: 400%;"><b>Welcome to my Personal website</b></h1>
+           
+           
+        </header>
+
+        <!-- About Section -->
+        <section class="my-2" style="background-color:aliceblue;">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img src="./static/buntu1.jpg" class="img-fluid" alt="Profile Picture" style="height: 400px;">
+                </div>
+                <div id="about" class="col-md-6 mt-1">
+                    <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">ABOUT</h2>
+                    <p>Hi, I'm Olabuntu Babatunde Afeez, a passionate biochemist and Python developer with a keen interest in Drug discovery, Artificial Intelligence, Cancer research and bioinformatics. This website showcases my journey, projects, and the exciting world of scientific research and computational biology. Explore to learn more about my work and aspirations.</p>
+                    <p><b>Name:</b> Olabuntu, Babatunde Afeez</p>
+                    <p><b>Language:</b> Python, SQL, Mysql, HTML and CSS</p>
+                    <p><b>Area of Expertise:</b> Deep Learning, Machine Learning, Web development, Automation, Database manipulation  and Molecular Docking</p>
+                    <p><b>Soft Skill:</b> Outstanding communication and interpersonal skills, Leadership and effective teamwork capabilities, Strong organizational skills, Proficient in time and project management, Excellent problem-solving abilities</p>
+                    <p><b>Email:</b> olabuntubabatunde@gmail.com</p>
+                    <p><b>Location:</b> Ibadan, Oyo state.</p>
+                    <p><b>Phone:</b> +234 9092 139 061</p>
+
+                <div class="social-links">
+                        
+                        <a href="./static/your-cv-file.pdf" download class="btn btn-secondary">Download CV</a>
+                      
+                            <a href="https://github.com/Olabuntu">
+                                <img src="./static/github.svg" alt="github" width="25" height="25" style="margin-left: 10px;">
+                            </a>
+                          
+                            <a href="www.linkedin.com/in/babatunde-olabuntu-1a2b49282">
+                                <img src="./static/linkedin.svg" alt="linkedin" width="25" height="25" style="margin-left: 10px;">
+                            </a>
+                            <a href="https://wa.link/iwcbyy">
+                                <img src="./static/whatsapp.svg" alt="whatsapp" width="25" height="25" style="margin-left: 10px;">
+                            </a>
+                           
+                            <a href="mailto:olabuntubabatunde@gmail.com">
+                                <img src="./static/Gmail.svg" alt="mail" width="25" height="25" style="margin-left: 10px;">
+                            </a>
+                        </ul>
+                    
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="service" class="text-center my-3">
+            <h2 style="font-stretch: extra-expanded; font-size: 300%;"><b>AREA OF EXPERTISES</b></h2>
+            <p style="font-style: italic; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 200%;">What I can do for you</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Artificial Intelligence</h5>
+                            <p class="card-text">I am an expact in Machine Learning and Deep Learning Technique</p>
+                            <a href="/ai" class="btn btn-link">Veiw Portfolio</a>
+                            
+                        </div>
+                        
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Bioinformatics</h5>
+                            <p class="card-text">I have experience in Pairwise Alignment (both global and local) and  Blasting </p>
+                            <a href="/bio" class="btn btn-link">Veiw Portfolio</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Automation and Web Scraping</h5>
+                            <p class="card-text"> with my knowledge in Python and the use of Modules like Selenium, BS4 and Pyautogui, I and able to carry out this </p>
+                            <a href="/automation" class="btn btn-link">Veiw Portfolio</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Web development and SQL</h5>
+                            <p class="card-text">With my knowledge in HTML, CSS and SQL I am able to build site for my Algorithms and also manipulate Database.</p>
+                            <a href="/web" class="btn btn-link">Veiw Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Overview -->
+        <section class="text-center my-3" style="background-color:aliceblue;">
+            <h1>Project Overview</h1>
+            <h3 class="text-center">Computer-aided drug design & discovery</h3>
+                <p>
+                    In this project, I developed an algorithm named <strong>XGBRegressor</strong> to predict the IC50 of compounds against the enzyme HMG-CoA reductase. HMG-CoA reductase is a critical enzyme in the mevalonate pathway, responsible for cholesterol synthesis in the liver. Inhibiting this enzyme can effectively lower cholesterol levels and prevent diseases related to hypercholesterolemia.
+                </p>
+                <p>
+                    The XGBRegressor algorithm was specifically designed to predict the half-maximal inhibitory concentration (IC50) of various compounds, providing valuable insights into their potency as inhibitors of HMG-CoA reductase. By accurately predicting IC50 values, this algorithm aids in the identification and discovery of new compounds that can serve as potent inhibitors, potentially leading to the development of new drugs to treat diseases associated with high cholesterol levels.
+                </p>
+                <a href="https://github.com/Olabuntu/HMG-COA/blob/main/work.ipynb" class="btn btn-primary">View Code</a>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="text-center my-5">
+            <h2>GET IN TOUCH</h2>
+            <p>Let's start a project together!</p>
+            <ul class="nav  justify-content-center list-unstyled d-flex ">
+                <a href="https://wa.link/iwcbyy">
+                    <img src="./static/whatsapp.svg" alt="whatsapp" width="25" height="25">
+                </a>
+               
+                <a href="mailto:olabuntubabatunde@gmail.com">
+                    <img src="./static/Gmail.svg" alt="mail" width="25" height="25" style="margin-left: 20px;">
+                </a>
+            </ul>
+        </section>
+
+
+        {% include 'footer.html' %}
+    </div>
+
+
+</body>
+</html>

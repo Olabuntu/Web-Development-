@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio Portfolio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+
+
+
+
+
+
+</head>
+
+
+<!-- #This is the Bioinformatics page -->
+        <body>
+
+            <header class="bg-dark text-white header">
+                <a style="align-content:end; color: aliceblue;" href="/" >Home</a>
+                
+                                
+                <div class="container text-center">
+                    
+                    <h1 style="font-style: italic;">Bioinformatics</h1>
+                    <p>
+                        Bioinformatics is an interdisciplinary field that combines biology, computer science, and statistics to analyze and interpret biological data. It plays a crucial role in genomics, proteomics, and other omics fields by developing computational tools and algorithms to study biological processes and systems. Bioinformatics tools enable researchers to analyze DNA, RNA, and protein sequences, predict gene functions, and identify genetic variations associated with diseases. Moreover, bioinformatics facilitates the comparison of genomes across different species, aiding in evolutionary studies and the identification of conserved genetic elements. By integrating biological data with computational methods, bioinformatics contributes to various areas of research, including drug discovery, personalized medicine, and functional genomics.
+                    </p>
+                </div>
+            </header>
+
+            <section>
+
+                <div class="container">
+                    <h1 style="text-align: center;"><b>Portfolio</b> </h1>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h2 class="card-title" style="text-align: center;">Blasting and Pairwise Alignment</h2>
+                                    <ul class="list-group">
+                                        <li class="mb-3"><h6>Performed BLAST searches to identify homologous sequences and infer functional annotations for novel genes. Specifically, I conducted BLAST searches for the first recognized COVID-19 protein against the NCBI protein database. BLAST (Basic Local Alignment Search Tool) is a widely used bioinformatics tool that compares query sequences against a database to find similar sequences. It helps in predicting the biological functions of sequences by finding regions of local similarity, which can be crucial for understanding the characteristics and potential impacts of newly discovered proteins. This process enabled the identification of homologous proteins and provided insights into the functional roles of the COVID-19 protein, facilitating further research and potential therapeutic developments.
+                                            <a href="https://github.com/Olabuntu/Bioinformatics/blob/main/Blasting(protein)/work.ipynb">View Code</a>
+                                        </li>
+
+                                        <li class="mb-3"><h6>Conducted pairwise sequence alignments to compare the amino acid sequences of proteins and identify conserved regions. Pairwise sequence alignment is a fundamental bioinformatics technique that aligns two sequences to identify similarities and differences between them. I performed pairwise alignments for the spike protein of SARS-CoV-2 and other coronaviruses to analyze sequence conservation and identify potential functional domains. By aligning protein sequences, researchers can gain insights into evolutionary relationships, structural similarities, and functional motifs, which are essential for understanding protein functions and designing targeted interventions.
+                                            <a href="https://github.com/Olabuntu/Bioinformatics/blob/main/Alignment/COD.ipynb">View Code</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h2 class="card-title" style="text-align: center;">Other Biological codes</h2>
+                                    <ul class="list-group">
+                                        <li class="mb-3"><h6>Developed a Python script that takes either the SMILES (Simplified Molecular Input Line Entry System) representation or the compound name to calculate the Lipinski Rule of 5 and determine if the compounds are druggable. The Lipinski Rule of 5 is a set of guidelines for evaluating the drug-likeness of a compound based on its pharmacokinetics in the human body. The rules are:
+                                            <ul>
+                                                <li>No more than 5 hydrogen bond donors (the sum of OHs and NHs)</li>
+                                                <li>No more than 10 hydrogen bond acceptors (the sum of Ns and Os)</li>
+                                                <li>A molecular mass less than 500 Daltons</li>
+                                                <li>An octanol-water partition coefficient (log P) not greater than 5</li>
+                                            </ul>
+                                            Compounds that conform to these criteria are more likely to have good absorption and permeation characteristics, making them potential candidates for drug development.
+                                            <a href="https://github.com/Olabuntu/BIOLOGICAL_CODES/blob/main/Lipinski_calculation.py">View Code</a>
+                                        </li>
+                                        <li class="mb-3"><h6>Developed a Python script to check the ADMET (Absorption, Distribution, Metabolism, Excretion, and Toxicity) properties of compounds using the SwissADME online tool. ADMET properties are crucial for determining the pharmacokinetic profile and potential safety of drug candidates. By assessing these properties, researchers can predict how a compound behaves in the body, its therapeutic potential, and its possible side effects. The script automates the process of querying SwissADME, collects the data, and compiles it into a CSV file for further analysis.
+                                            <a href="https://github.com/Olabuntu/BIOLOGICAL_CODES/blob/main/ADMET_SWISSadme.py">View Code</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <div class="container p-0 mt-2">
+                
+        <div class="row">
+            <div class="col-md-6">
+                
+                        <h2 class="card-title">MODULES</h2>
+                        <h4>Biopython, RDkit, Pandas, Numpy, Selenium, BS4 </h4>
+                        </div>
+                        </div>
+               {% include 'footer.html' %}
+            </div>
+
+
+                                        
+
+
+
+            
+            
+
+
+
+           
+        </body>
+
+
+
+
+
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
