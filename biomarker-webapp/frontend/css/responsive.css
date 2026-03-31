@@ -1,0 +1,235 @@
+/* Responsive Design - IITA Branding */
+
+/* Mobile First Approach */
+
+/* Small devices (phones) */
+@media (max-width: 576px) {
+    .app-header {
+        padding: 0 15px;
+        height: 60px;
+        grid-template-columns: auto 1fr auto;
+        gap: 15px;
+    }
+    
+    .header-logo img {
+        height: 35px;
+    }
+    
+    .header-title h1 {
+        font-size: 0.9rem;
+    }
+    
+    .header-title p {
+        font-size: 0.7rem;
+    }
+    
+    .header-stats {
+        display: none;
+    }
+    
+    body {
+        padding-top: 60px;
+    }
+    
+    .sidebar {
+        width: 0;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        top: 60px;
+        height: calc(100vh - 60px);
+    }
+    
+    .sidebar.open {
+        transform: translateX(0);
+        width: 280px;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        padding: 20px 15px;
+    }
+    
+    
+    h1, .hero-title {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-logo {
+        max-width: 200px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .converter-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-intro {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .intro-image {
+        text-align: center;
+    }
+    
+    .input-options {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .app-header {
+        padding: 0 20px;
+    }
+    
+    .header-stats {
+        gap: 15px;
+    }
+    
+    .sidebar {
+        width: 250px;
+    }
+    
+    .main-content {
+        margin-left: 250px;
+        padding: 30px;
+    }
+    
+    .converter-content {
+        grid-template-columns: 1fr;
+    }
+    
+    h1, .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .sidebar {
+        width: 280px;
+    }
+    
+    .main-content {
+        margin-left: 280px;
+    }
+}
+
+/* Extra large devices */
+@media (min-width: 993px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* Footer */
+.app-footer {
+    margin-left: var(--sidebar-width);
+    padding: 15px 40px;
+    background: var(--bg-sidebar);
+    border-top: 1px solid var(--bg-glass-border);
+    margin-top: 60px;
+    position: relative;
+    z-index: 10; /* Above home page background slideshow and overlay */
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-info {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-info p {
+    margin: 3px 0;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+.footer-info strong {
+    color: var(--iita-orange);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    position: fixed;
+    top: calc(var(--header-height) + 20px);
+    left: 20px;
+    z-index: 1001;
+    background: var(--gradient-iita);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: var(--shadow-lg);
+    transition: all var(--transition-base);
+}
+
+.mobile-menu-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-glow-orange);
+}
+
+@media (max-width: 576px) {
+    .mobile-menu-toggle {
+        display: block;
+        top: calc(60px + 20px);
+    }
+    
+    .app-footer {
+        margin-left: 0;
+        padding: 12px 20px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .sidebar {
+        display: none;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .btn {
+        display: none;
+    }
+}
